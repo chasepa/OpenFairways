@@ -1,0 +1,76 @@
+/* Set the background of the entire website to gray */
+body {
+    background-color: #D3D3D3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the header */
+header {
+    background-color: #228B22; /* Green color for the header */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header img {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+/* Style for the navigation menu in header and footer */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the footer */
+footer {
+    background-color: #228B22; /* Green color for the footer */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer nav ul {
+    flex-direction: row;
+}
+
+main div {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
