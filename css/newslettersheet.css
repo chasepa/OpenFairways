@@ -1,0 +1,51 @@
+/* Set the background and basic styling for the entire site */
+body {
+    background-color: #D3D3D3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*header and footer styling */
+header {
+    background-color: #228B22; /* Green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Nav menu styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style the form and its background */
+form {
+    background-color: #D3D3D3; /* Grey background */
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+form label, form input {
+    display: block;
+    margin-bottom: 10px;
+}
