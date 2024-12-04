@@ -1,35 +1,43 @@
 /* Set the background and basic styling for the entire site */
-body {
-    background-color: #D3D3D3;
+body, html {
+    background-color: white;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    height: 100%; /* Ensures the body takes up the full height of the viewport */
 }
 
-/* header and footer styling */
+/* Header and footer styling */
 header, footer {
     background-color: #228B22; /* Green color */
     color: white;
-    text-align: center;
+    position: relative; /* Allows precise positioning of elements */
 }
 
 header {
-    padding: 20px;
+    padding: 20px 0;
+    overflow: hidden; /* Ensures the floated image stays contained */
 }
 
 footer {
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    width: 100%; /* Ensures the footer spans the full width */
+    text-align: center; /* Centers footer content */
 }
 
-/* nav styling */
+/* Navigation styling */
+nav {
+    position: absolute; /* Allows positioning relative to the header */
+    top: 50%; /* Vertically centers the nav bar */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Fine-tunes centering */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
+    display: flex; /* Use flexbox for horizontal alignment */
 }
 
 nav ul li {
@@ -37,37 +45,69 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    color: white; /* White text for navigation links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover */
 }
 
 /* Image and title in the header */
 header img {
     max-width: 100px;
-    display: block;
-    margin: 0 auto;
-}
-
-header h1 {
-    margin: 10px 0;
+    float: left; /* Floats the image to the left */
+    margin-left: 15px; /* Adds spacing between the image and the edge */
 }
 
 /* Main content styling */
-main div {
-    margin: 20px;
+main {
+    display: flex; /* Enable flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align content near the top of the body */
+    align-items: center; /* Center content horizontally */
+    min-height: calc(100vh - 130px); /* Adjust for header and footer height */
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+    text-align: center; /* Aligns text to the center */
 }
 
-main img {
-    max-width: 100%;
-    height: auto;
+main .image-container {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    gap: 20px; /* Adds space between the two items */
+    margin: 20px 0;
+}
+
+/* Style for each image and button wrapper */
+main .image-box {
+    padding: 20px;
+    text-align: center; /* Centers the content inside the box */
+    flex: 1; /* Allows the boxes to take up equal space */
+    max-width: 300px; /* Restrict the maximum width */
+    border-radius: 10px; /* Keep the rounded corners if needed */
+    background-color: transparent; /* Remove the white background */
+}
+
+/* Style for images inside the boxes */
+main .image-box img {
+    width: 150px; /* Explicitly set the width for smaller images */
+    height: auto; /* Maintain aspect ratio */
     display: block;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto; /* Center images and add bottom spacing */
+}
+
+/* Style for buttons */
+main .image-box button {
+    padding: 10px 15px;
+    background-color: #228B22; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+main .image-box button:hover {
+    background-color: #1e7a1e; /* Darker green for hover effect */
 }
